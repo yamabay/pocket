@@ -1,0 +1,12 @@
+global_wait_time: 2
+
+http_timeout: 2
+http_get_requests:
+  - https://wikipedia.org
+  - https://example.com
+
+ping_timeout: 1
+ping_check:
+  - 1.1.1.1
+  - 8.8.8.8
+
