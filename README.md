@@ -25,7 +25,7 @@ Pocket is meant to be an easily customizable monitoring stack that can be deploy
   - The `pocket_grafana` service handles visualizing the metrics through a pre-built Grafana dashboard.
   - Grafana is accessible on port `:3000`.
   - By default, **anonymous** access is enabled. For admin access, the default Grafana `admin:admin` credentials will work, and update via environment variables as needed.
-  - **Environment Variables** - Set in .env file. 
+  - **Environment Variables**
     - `GF_AUTH_ANONYMOUS_ENABLED` - Handles anonymous login. This may be desired if running locally.
     - `GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH` - Sets the path to the default dashboard. The dashboard JSON file is set in the `grafana/provisioning/dashboards` directory and can be customized easily if changes are desired.
     - `GF_USERS_HOME_PAGE` - Sets the default home page to the `Network Metrics` dashboard so users are brought directly to this dashboard once grafana is accessed.
