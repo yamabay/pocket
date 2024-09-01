@@ -99,7 +99,7 @@
               "id": "byValue",
               "options": {
                 "op": "lt",
-                "reducer": "lastNotNull",
+                "reducer": "mean",
                 "value": 0
               }
             },
@@ -299,6 +299,7 @@
             }
           },
           "mappings": [],
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -314,7 +315,28 @@
           },
           "unit": "s"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byValue",
+              "options": {
+                "op": "lt",
+                "reducer": "mean",
+                "value": 0
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 8,
